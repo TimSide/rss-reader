@@ -1,0 +1,29 @@
+.chanel-list {
+  flex: 0.7;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.chanel-view {
+  background-color: #3CAEA3;
+  flex: 2;
+}
+
+.feed-item {
+  background-color: #173F5F;
+  height: 50px;
+  border: 1px solid black;
+  opacity: 0.9;
+  border-radius: 5px;
+  user-select: none;
+}
+.feed-item:hover {
+  opacity: 1;
+  cursor: pointer;
+  background-color: #20639B;
+}
+
+.content {
+  display: flex;
+  background-color: #173F5F;
+}

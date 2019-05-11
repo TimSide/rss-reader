@@ -12,17 +12,14 @@ export class FeedServiceService {
 
   constructor(private http: HttpClient) { }
 
-  getFeedContent(url: string) {
+  getFeedContent(url: string): Observable<FeedModel> {
     const customUrl = 'http://www.bbc.co.uk/feeds/rss/music/latest_releases.xml';
-    return this.http.get(this.rssToJsonServiceBaseUrl + customUrl).subscribe(response => {
-      console.log('res OK');
-      console.log(response.toString());
-    });
+    return this.http.get<FeedModel>(this.rssToJsonServiceBaseUrl + customUrl);
       // .map(this.extractFeeds)
       // .catch(this.handleError);
   }
 
-  private extractFeeds(res: Response): FeedModel {
+  public extractFeeds(res) {
     const feed = res.json();
     return feed || { };
   }

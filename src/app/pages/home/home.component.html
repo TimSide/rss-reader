@@ -1,3 +1,11 @@
-<p>
-  home works!
-</p>
+<div class="content">
+  <div class="chanel-list">
+    <div *ngFor="let feed of feedList" class="feed-item" (click)="selectFeed($event)">
+      <h3>{{feed?.title}}</h3>
+    </div>
+  </div>
+
+  <div class="chanel-view">
+    {{selectedFeedText}}
+  </div>
+</div>
