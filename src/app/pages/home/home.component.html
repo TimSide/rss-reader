@@ -1,11 +1,28 @@
 <div class="content">
   <div class="chanel-list">
-    <div *ngFor="let feed of feedList" class="feed-item" (click)="selectFeed($event)">
-      <h3>{{feed?.title}}</h3>
-    </div>
+<!--    <div *ngFor="let feed of feedList" class="feed-item" (click)="selectFeed($event)">-->
+<!--      <h3>{{feed?.title}}</h3>-->
+<!--    </div>-->
+    <tabset [vertical]="true" type="pills">
+      <tab heading="Vertical 1">Vertical content 1</tab>
+      <tab heading="Vertical 2">Vertical content 2</tab>
+    </tabset>
   </div>
 
   <div class="chanel-view">
     {{selectedFeedText}}
+    <div class="btn-group" dropdown>
+      <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
+        Button dropdown <span class="caret"></span>
+      </button>
+      <ul *dropdownMenu class="dropdown-menu" role="menu">
+        <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+        <li class="divider dropdown-divider"></li>
+        <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>

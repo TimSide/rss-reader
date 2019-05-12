@@ -5,6 +5,7 @@ import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import {HomeComponent} from './pages/home/home.component';
+import {BsDropdownModule, TabsModule} from 'ngx-bootstrap';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,8 @@ import {HomeComponent} from './pages/home/home.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    BsDropdownModule.forRoot(),
+    TabsModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
