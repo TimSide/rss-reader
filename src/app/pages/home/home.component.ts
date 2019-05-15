@@ -1,16 +1,18 @@
 import {Component, OnInit} from '@angular/core';
 import {FeedServiceService} from '../../services/feed-service/feed-service.service';
 import {FeedItemModel} from '../../models/feed-item.model';
+import {RssFeedModel} from '../../models/rss-feed.model';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
 
   feedList: FeedItemModel[];
   selectedFeedText: string;
+  savedRssFeeds: RssFeedModel[];
 
   constructor(private feedService: FeedServiceService) { }
 
